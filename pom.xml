@@ -29,6 +29,13 @@
             <url>http://nexus.broadleafcommerce.org/nexus/content/repositories/releases/</url>
         </repository>
     </repositories>
+    <pluginRepositories>
+	<pluginRepository>
+			<id>PostgreSql</id>
+			<name>PostgreSql</name>
+			<url>https://repository.sonatype.org/content/groups/forge/</url>
+	</pluginRepository>
+	</pluginRepositories>
     <build>
         <pluginManagement>
             <plugins>
@@ -238,13 +245,18 @@
                     </configuration>
                     <dependencies>
                         <!-- Other dependencies -->
-                        <dependency>
+                        <!-- <dependency>
                             <groupId>org.hsqldb</groupId>
                             <artifactId>hsqldb</artifactId>
                             <version>2.3.1</version>
                             <type>jar</type>
                             <scope>compile</scope>
-                        </dependency>
+                        </dependency> -->
+                        <dependency>
+							<groupId>postgresql</groupId>
+							<artifactId>postgresql</artifactId>
+							<version>9.2-1002.jdbc4</version>
+						</dependency>
                         <dependency>
                             <groupId>commons-dbcp</groupId>
                             <artifactId>commons-dbcp</artifactId>
